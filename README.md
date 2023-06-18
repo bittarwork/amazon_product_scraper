@@ -1,2 +1,9 @@
-# amazon_product_scraper
-amazon product scraper for appel 
+Web scraping is a technique used to extract data from websites automatically. In this code, a web scraper is created to extract data from Amazon Saudi Arabia website about Apple products. The code is written in Python and uses the BeautifulSoup library to parse the HTML content of the webpage.
+The first step is to import the required libraries, including requests, urllib.request, time, BeautifulSoup, json, and csv. The requests library is used to send HTTP requests to the website, while urllib.request is used to download images from the website. The time library is used to add delay between requests to avoid overloading the website with requests. The BeautifulSoup library is used to parse the HTML content of the web page, while the json and csv libraries are used to store the extracted data.
+The code creates two files to store the extracted data, a CSV file and a JSON file. The CSV file is used to store the name, price, and image of each product, while the JSON file is used to store the same information in a structured format.
+The code then defines the URL of the website and initializes the data dictionary and CSV headers. It also opens the CSV and JSON files for writing.
+The code then enters a for loop that iterates over a range of 400 pages of the website. It sends a GET request to the URL of each page and parses the HTML content using BeautifulSoup. It then finds all the div elements with the class 'sg-col-inner' on the page.
+For each div element, the code extracts the name, price, and image of the product if they exist. It then writes the data to the CSV file using the csv.DictWriter object and adds the data to the data dictionary.
+The code then writes the data to the JSON file in a structured format using the json.dumps function. It also adds a comma after each JSON object except for the last one.
+Finally, the code closes the CSV and JSON files.
+Overall, this code is a simple web scraper that extracts data from Amazon Saudi Arabia website about Apple products. It demonstrates the use of Python libraries such as requests, BeautifulSoup, csv, and json to extract and store data from a website.
